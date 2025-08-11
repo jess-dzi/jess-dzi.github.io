@@ -1,0 +1,55 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(152, 197, 197);
+    font-style: normal;
+}
+
+header, footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: whitesmoke;
+}
+
+nav a {
+    color: #ffa;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+  }
+  
+  figure {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+  }
+  
+  figure img {
+    border-radius: 8px;
+    border: 2px solid #ccc;
+  }
+  
+  figure figcaption {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 4px;
+    font-style: italic;
+  }
+  
+  @media (max-width: 600px) {
+    figure {
+      display: block;
+      margin: 20px auto;
+    }
+  }
+  
+  
