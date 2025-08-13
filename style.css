@@ -1,50 +1,18 @@
 body {
     margin: 0;
-    height: 100vh;
-    background: black;
-    color: white;
-    font-family: 'Press Start 2P', cursive;
+    background: whitesmoke;
+    color: black;
+    font-family: 'Times New Roman', serif;
     font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
+    line-height: 1.6;
   }
   
-  /* Stars using box-shadows for many random points */
-  body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1px;
-    height: 1px;
-    background: transparent;
-    box-shadow:
-      20px 50px white,
-      100px 80px white,
-      200px 150px white,
-      300px 200px white,
-      400px 100px white,
-      500px 250px white,
-      600px 300px white,
-      700px 150px white,
-      800px 400px white,
-      900px 50px white;
-    animation: twinkle 2s infinite alternate;
-  }
   
-  @keyframes twinkle {
-    from { opacity: 1; }
-    to { opacity: 0.5; }
-  }
+  
   
   html, body {
     margin: 0;
-    padding: 0;
-    overflow-x: hidden; 
-    overflow-y: auto;   
+    padding: 0;  
     font-family: 'Times New Roman', Times, serif; 
     line-height: 1.6;
     background-color: #f9f9f9;
@@ -55,11 +23,58 @@ body {
     max-width: 800px; 
     margin: 0 auto;  
     padding: 20px;
+    text-align: center; /* center only inside container */
 }
 
 p, h1, h2, h3 {
     word-wrap: break-word;
 }
 
-  
+header {
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 10px;
+    text-align: left; /* text left-aligned in sections */
+}
+
+figure {
+    margin: 20px 0;
+}
+
+.icon {
+    width: 30px;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+.social-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+}
+
+img {
+    background-color: transparent;  /* ensures no background on images */
+    display: inline-block;
+  }
   
