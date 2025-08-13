@@ -1,107 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
- 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jessica Dziedzic's Personal Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Jessica Dziedzic - Home</title>
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        body {
-          margin: 0;
-          padding: 0;
-          background: black;
-          color: white;
-          font-family: "Times New Roman", Arial;
-          line-height: 1.5;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: flex-start;
-          min-height: 100vh;
-          text-align: center;
-          overflow-x: hidden;
-        }
-    
-        h1 {
-          font-size: 2rem;
-          margin-top: 2rem;
-        }
-    
-        p {
-          max-width: 600px;
-          margin: 1rem;
-        }
-    
-        
-        .star {
-          position: absolute;
-          width: 2px;
-          height: 2px;
-          background: white;
-          border-radius: 50%;
-          animation: twinkle 2s infinite ease-in-out;
-        }
-    
-        @keyframes twinkle {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0.3; }
-        }
-      </style>
-      <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
 </head>
-
 <body>
-    <header>
-        <h1>Jessica Dziedzic's Personal Website</h1>
-        <nav>
-            |
-            <a href="#About">About Me</a> |
-            <a href="#Projects">Projects</a> 
-            <a href="#Contact">Contact</a>
-      
-        </nav>
-    </header>
+<header>
+    <h1>Jessica Dziedzic</h1>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="resume.html">Resume</a> |
+        <a href="projects.html">Projects</a> |
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
+<section>
+    <h2>About Me</h2>
+    <p>Hi! I'm Jessica, a fourth-year at the University of Virginia studying Computer Science on a Cybersecurity focal path. My interest in Computer Science started my first year when I took an intro to IT class here at UVA. Through my coursework, personal projects and internships I have experience programming with Python, Java, C# and Javascript. I'm a fast learner who enjoys being pushed outside of my comfort zone and learning new things! I have a passion for languages—both programming and linguistic—and I am also studying Mandarin Chinese and Spanish. I have a black lab at home who I enjoy going for runs with. In my free time, I enjoy reading, cooking, running and spending time with friends and family.</p>
 
+    <figure>
+        <img src="headshot.jpeg" alt="Me" width="200" />
+    </figure>
 
-    <section id="About">
-        <h2>About Me</h2>
-        <p> Hi! I'm Jessica, a fourth-year at the University of Virginia studying Computer Science on a Cybersecurity focal path. My interest in Computer Science started my first year when I took an intro to IT class here at UVA. Through my coursework, personal projects and internships I have experience programming with Python, Java, C# and Javascript. I'm a fast learner who enjoys being pushed outside of my comfort zone and learning new things! I have a passion for languages—both programming and lingustic—and I am also studying Mandarin Chinese and Spanish. In my free time, I enjoy reading, cooking, running and spending time with friends and family. </p>
-        <figure>
-            <img src="headshot.jpeg" alt="Me!" width="200" />
-            <figcaption>Me!</figcaption>
-          </figure>
-          
-          <figure>
-            <img src= "IMG_4772.jpeg" alt="I have the cutest dog in the world" width="200" />
-            <figcaption>I have the cutest dog in the world</figcaption>
-          </figure>
-          
-    </section>
+    <figure>
+        <img src="IMG_4772.jpeg" alt="I have the cutest dog in the world" width="200" />
+        
+    </figure>
+</section>
 
-    <section id="Projects">
-        <h2>Projects</h2>
-        <p> I'm excited to share what I've been working on! Below you can find a directory of my personal projects!</p>
-    </section>
+<div class="social-links">
+    <a href="https://www.linkedin.com/in/jessicadziedzic/" target="_blank">
+        <img src="linkedin.png" alt="LinkedIn" class="icon">
+    </a>
+    <a href="https://github.com/jess-dzi" target="_blank">
+        <img src="github.png" alt="GitHub" class="icon">
+    </a>
+</div>
 
-    <section>
-        <h2>Contact</h2>
-        <p>Feel free to reach out!</p>
-        <p>Email: vjh2rr@virginia.edu</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/jessicadziedzic/">linkedin.com/in/jessicadziedzic/</a></p>
-        <p>Github: </p>
-    </section>
-
-    <footer>
-        <p>© 2025 Jessica Dziedzic</p>
-
-    </footer>
-
-    <script src="script.js"></script>
+<footer>
+    <p>© 2025 Jessica Dziedzic</p>
+</footer>
 </body>
 </html>
