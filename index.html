@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jessica Dziedzic - Home</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jessica Dziedzic - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-    <h1>Jessica Dziedzic</h1>
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="resume.html">Resume</a> |
-        <a href="projects.html">Projects</a> |
+  <header>
+    <div class="container nav-container">
+      <h1 class="logo">Jessica Dziedzic</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
-    </nav>
-</header>
+      </nav>
+    </div>
+  </header>
 
-<section>
-    <h2>About Me</h2>
-    <p>Hi! I'm Jessica, a fourth-year at the University of Virginia studying Computer Science on a Cybersecurity focal path. My interest in Computer Science started my first year when I took an intro to IT class here at UVA. Through my coursework, personal projects and internships I have experience programming with Python, Java, C# and Javascript. I'm a fast learner who enjoys being pushed outside of my comfort zone and learning new things! I have a passion for languages—both programming and linguistic—and I am also studying Mandarin Chinese and Spanish. I have a black lab at home who I enjoy going for runs with. In my free time, I enjoy reading, cooking, running and spending time with friends and family.</p>
+  <main class="container">
+    <section class="about">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          Hi! I'm Jessica, a fourth-year at the University of Virginia studying Computer Science on a Cybersecurity focal path. 
+          Through coursework, personal projects and internships, I have experience with Python, Java, C#, and Javascript. 
+          I’m passionate about languages—both programming and linguistic—and I am also studying Mandarin Chinese and Spanish. 
+          In my free time, I enjoy reading, cooking, running, and spending time with friends and family.
+        </p>
+      </div>
+      <div class="about-images">
+        <img src="headshot.jpeg" alt="Jessica Headshot" class="profile-pic">
+        <img src="IMG_4772.jpeg" alt="My dog" class="profile-pic">
+      </div>
+    </section>
 
-    <figure>
-        <img src="headshot.jpeg" alt="Me" width="200" />
-    </figure>
-
-    <figure>
-        <img src="IMG_4772.jpeg" alt="I have the cutest dog in the world" width="200" />
-        
-    </figure>
-</section>
-
-<div class="social-links">
-    <a href="https://www.linkedin.com/in/jessicadziedzic/" target="_blank">
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/jessicadziedzic/" target="_blank">
         <img src="linkedin.png" alt="LinkedIn" class="icon">
-    </a>
-    <a href="https://github.com/jess-dzi" target="_blank">
+      </a>
+      <a href="https://github.com/jess-dzi" target="_blank">
         <img src="github.png" alt="GitHub" class="icon">
-    </a>
-</div>
+      </a>
+    </div>
+  </main>
 
-<footer>
+  <footer>
     <p>© 2025 Jessica Dziedzic</p>
-</footer>
+  </footer>
 </body>
 </html>

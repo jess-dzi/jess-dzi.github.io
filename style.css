@@ -1,80 +1,106 @@
+/* Base styles */
 body {
     margin: 0;
-    background: whitesmoke;
-    color: black;
-    font-family: 'Times New Roman', serif;
-    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    background: #fdfdfd;
+    color: #222;
     line-height: 1.6;
   }
   
+  /* Layout */
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
   
+  /* Header / Navigation */
+  header {
+    background: white;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
   
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+  }
   
-  html, body {
-    margin: 0;
-    padding: 0;  
-    font-family: 'Times New Roman', Times, serif; 
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-.container {
-    max-width: 800px; 
-    margin: 0 auto;  
-    padding: 20px;
-    text-align: center; /* center only inside container */
-}
-
-p, h1, h2, h3 {
-    word-wrap: break-word;
-}
-
-header {
-    margin-bottom: 20px;
-}
-
-nav a {
-    color: black;
+  .logo {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #0077b6;
+  }
+  
+  nav a {
+    margin-left: 20px;
     text-decoration: none;
-    margin: 0 10px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-section {
-    max-width: 800px;
-    margin: auto;
-    padding: 0 10px;
-    text-align: left; /* text left-aligned in sections */
-}
-
-figure {
-    margin: 20px 0;
-}
-
-.icon {
-    width: 30px;
-    margin: 0 5px;
-    vertical-align: middle;
-}
-
-.social-links {
-    margin-top: 20px;
+    color: #444;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+  
+  nav a:hover {
+    color: #0077b6;
+  }
+  
+  /* About section */
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    margin: 40px 0;
+  }
+  
+  .about-text h2 {
+    color: #0077b6;
+    margin-bottom: 15px;
+  }
+  
+  .about-images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .profile-pic {
+    width: 200px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-pic:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Social links */
+  .social-links {
+    margin: 30px 0;
     text-align: center;
-}
-
-footer {
-    margin-top: 40px;
-    font-size: 0.9em;
-    color: #555;
+  }
+  
+  .icon {
+    width: 32px;
+    margin: 0 8px;
+    transition: transform 0.2s ease;
+  }
+  
+  .icon:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Footer */
+  footer {
+    padding: 20px 0;
+    border-top: 1px solid #eee;
     text-align: center;
-}
-
-img {
-    background-color: transparent;  /* ensures no background on images */
-    display: inline-block;
+    font-size: 0.9rem;
+    color: #666;
   }
   
