@@ -5,67 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jessica Dziedzic - Projects</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Tic Tac Toe Board */
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 80px);
+            grid-template-rows: repeat(3, 80px);
+            gap: 5px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .cell {
+            background: #f5f5f5;
+            border: 2px solid #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .cell:hover {
+            background: #e0e0e0;
+        }
+
+        #message {
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        #reset {
+            margin-top: 10px;
+            padding: 6px 12px;
+            cursor: pointer;
+            font-weight: 600;
+            background-color: #0077b6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background 0.2s;
+        }
+
+        #reset:hover {
+            background-color: #005f87;
+        }
+
+        .project-card {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 500px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
-    <header class="profile-header">
-        <div class="header-content">
-            <h1 class="name">Projects</h1>
-        </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="resume.html">Resume</a>
-            <a href="projects.html" class="active">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+<header class="profile-header">
+    <div class="header-content">
+        <h1 class="name">Projects</h1>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-    <main class="projects-content">
-        <p>I'm excited to share what I've been working on! Below is a directory of my personal projects.</p>
+<main class="projects-content">
+    <p>I'm excited to share what I've been working on! Below is a directory of my personal projects.</p>
 
-        <div class="projects-grid">
-            <!-- Example project card -->
-            <div class="project-card">
-                <h2>Tic Tac Toe</h2>
-                <p>Play against an unbeatable AI using Minimax with optional Alpha-Beta pruning.
-                    The AI evaluates game states to always play optimally.</p>
-                    <div class="tic-tac-toe">
-                        <div id="board" class="board">
-                            <div class="cell" data-x="0" data-y="0"></div>
-                            <div class="cell" data-x="0" data-y="1"></div>
-                            <div class="cell" data-x="0" data-y="2"></div>
-                            <div class="cell" data-x="1" data-y="0"></div>
-                            <div class="cell" data-x="1" data-y="1"></div>
-                            <div class="cell" data-x="1" data-y="2"></div>
-                            <div class="cell" data-x="2" data-y="0"></div>
-                            <div class="cell" data-x="2" data-y="1"></div>
-                            <div class="cell" data-x="2" data-y="2"></div>
-                        </div>
-                        <p id="message"></p>
-                        <button id="reset">Reset Game</button>
-                    </div>
+    <div class="projects-grid">
+       
+        <div class="project-card">
+            <h2>Tic Tac Toe</h2>
+            <p>Play against an unbeatable AI using Minimax with optional Alpha-Beta pruning.
+               The AI evaluates game states to always play optimally.</p>
+
+            <div class="tic-tac-toe">
+                <div id="board" class="board">
+                    <div class="cell" data-x="0" data-y="0"></div>
+                    <div class="cell" data-x="0" data-y="1"></div>
+                    <div class="cell" data-x="0" data-y="2"></div>
+                    <div class="cell" data-x="1" data-y="0"></div>
+                    <div class="cell" data-x="1" data-y="1"></div>
+                    <div class="cell" data-x="1" data-y="2"></div>
+                    <div class="cell" data-x="2" data-y="0"></div>
+                    <div class="cell" data-x="2" data-y="1"></div>
+                    <div class="cell" data-x="2" data-y="2"></div>
                 </div>
-
-                <div class="project-card">
-                    <h2>More coming soon!</h2>
-                </div>
-            </div> <!-- End of projects-grid -->
-        </main>
-        
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/jessicadziedzic/" target="_blank">
-                <img src="linkedin.png" alt="LinkedIn" class="icon">
-            </a>
-            <a href="https://github.com/jess-dzi" target="_blank">
-                <img src="github.png" alt="GitHub" class="icon">
-            </a>
+                <p id="message"></p>
+                <button id="reset">Reset Game</button>
+            </div>
         </div>
-        
-        <footer>
-            <p>© 2025 Jessica Dziedzic</p>
-        </footer>
-        
-    
-        <script src="tictactoe.js"></script>
-        </body>
-        </html>
+
+        <!-- Placeholder Project -->
+        <div class="project-card">
+            <h2>More coming soon!</h2>
+        </div>
+    </div>
+</main>
+
+<div class="social-links">
+    <a href="https://www.linkedin.com/in/jessicadziedzic/" target="_blank">
+        <img src="linkedin.png" alt="LinkedIn" class="icon">
+    </a>
+    <a href="https://github.com/jess-dzi" target="_blank">
+        <img src="github.png" alt="GitHub" class="icon">
+    </a>
+</div>
+
+<footer>
+    <p>© 2025 Jessica Dziedzic</p>
+</footer>
+
+
+<script src="tictactoe.js"></script>
+</body>
+</html>
+
         
