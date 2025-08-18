@@ -1,43 +1,50 @@
-/* Base styles */
+/* Base */
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: #fdfdfd;
+    background: #fff;
     color: #222;
     line-height: 1.6;
+    text-align: center;
   }
   
-  /* Layout */
-  .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
+  /* Header */
+.profile-header {
+    margin-top: 30px;
+    text-align: center;
   }
   
-  /* Header / Navigation */
-  header {
-    background: white;
-    border-bottom: 1px solid #eee;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  
-  .nav-container {
+  .header-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 15px 0;
+    gap: 15px; /* space between headshot and name */
   }
   
-  .logo {
-    font-weight: 600;
-    font-size: 1.4rem;
-    color: #0077b6;
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .name {
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+  
+  
+  /* Navigation */
+  nav {
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 12px 0;
   }
   
   nav a {
-    margin-left: 20px;
+    margin: 0 20px;
     text-decoration: none;
     color: #444;
     font-weight: 500;
@@ -48,58 +55,40 @@ body {
     color: #0077b6;
   }
   
-  /* About section */
+  nav a.active {
+    font-weight: 700;
+    color: #000;
+  }
+  
+  /* About */
   .about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    align-items: center;
-    margin: 40px 0;
-  }
-  
-  .about-text h2 {
-    color: #0077b6;
-    margin-bottom: 15px;
-  }
-  
-  .about-images {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .profile-pic {
-    width: 200px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
-  }
-  
-  .profile-pic:hover {
-    transform: scale(1.05);
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.7;
   }
   
   /* Social links */
   .social-links {
     margin: 30px 0;
-    text-align: center;
   }
   
   .icon {
-    width: 32px;
-    margin: 0 8px;
+    width: 30px;
+    margin: 0 10px;
     transition: transform 0.2s ease;
   }
   
   .icon:hover {
-    transform: scale(1.2);
+    transform: scale(1.15);
   }
   
   /* Footer */
   footer {
     padding: 20px 0;
     border-top: 1px solid #eee;
-    text-align: center;
     font-size: 0.9rem;
     color: #666;
   }
