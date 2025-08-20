@@ -1,9 +1,7 @@
 import os
 import yfinance as yf
 import matplotlib.pyplot as plt
-from datetime import datetime
 import json
-from prediction_pipeline import PredictionPipeline
 
 class ChartGenerator:
     def __init__(self, output_dir="../Personal Project/charts"):
@@ -21,30 +19,38 @@ class ChartGenerator:
         plt.legend()
         plt.grid(True, alpha=0.3)
 
-        # Save with timestamp
+        # Save chart
         filename = f"{name.replace(' ', '_')}_chart.png"
         filepath = os.path.join(self.output_dir, filename)
         plt.savefig(filepath, bbox_inches="tight")
         plt.close()
-        return filename  # Return filename only for web path
+        return filename  # Return just filename for website relative path
 
     def generate_all(self, index_predictions):
+        """
+        Generate charts and dashboard JSON for a set of index predictions.
+        index_predictions should be a dict: {name: (symbol, prediction)}
+        """
         print("generate_all called with:", index_predictions)
-        dashboard_data = {}
+        dashboard_data = []
+
         for name, (symbol, pred) in index_predictions.items():
             print(f"Generating chart for {name}...")
-            chart_path = self.generate_chart(symbol, name)
-            dashboard_data[name] = {
+            filename = self.generate_chart(symbol, name)
+            dashboard_data.append({
                 "name": name,
                 "symbol": symbol,
                 "prediction": "up" if pred == 1 else "down",
-                "chart": chart_path
-            }
+                "chart": filename  # relative path for website
+            })
 
-        json_path = os.path.abspath(os.path.join(self.output_dir, "dashboard.json"))
+        # Write JSON for website
+        json_path = os.path.join(self.output_dir, "dashboard.json")
         print("Writing dashboard JSON to:", json_path)
         with open(json_path, "w") as f:
             json.dump(dashboard_data, f, indent=2)
+
+        print("Charts and JSON ready!")
         return dashboard_data
 
 
