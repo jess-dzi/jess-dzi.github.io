@@ -103,9 +103,15 @@
         </div>
 
         <!-- Placeholder Project -->
-        <div class="project-card">
-            <h2>More coming soon!</h2>
+        <div class="project-card" id="stock-dashboard">
+            <h2>Market Predictions</h2>
+            <p>Using Python, a dashboard that predicts whether the price of the three major indecies will increase or decrease over the next 30 days based on historical data from the past 5 years.
+            </p>
+            <div id="dashboard-container">
+                <!-- Dashboard items will be injected here by JS -->
+            </div>
         </div>
+        
     </div>
 </main>
 
@@ -124,6 +130,54 @@
 
 
 <script src="tictactoe.js"></script>
+
+<script>
+    async function loadStockDashboard() {
+        try {
+            const response = await fetch('dashboard.json');  // relative path
+            const data = await response.json();
+    
+            const container = document.getElementById('stock-dashboard');
+    
+            data.forEach(index => {
+                // Create card div
+                const card = document.createElement('div');
+                card.classList.add('project-card');
+    
+                // Name
+                const title = document.createElement('h2');
+                title.textContent = index.name;
+                card.appendChild(title);
+    
+                // Prediction arrow
+                const arrow = document.createElement('span');
+                arrow.textContent = index.prediction === 'up' ? '▲' : '▼';
+                arrow.style.color = index.prediction === 'up' ? 'green' : 'red';
+                arrow.style.fontSize = '1.5rem';
+                arrow.style.marginLeft = '10px';
+                title.appendChild(arrow);
+    
+                // Chart image
+                const img = document.createElement('img');
+                img.src = index.chart;
+                img.alt = `${index.name} chart`;
+                img.style.width = '100%';
+                img.style.borderRadius = '8px';
+                img.style.marginTop = '10px';
+                card.appendChild(img);
+    
+                container.appendChild(card);
+            });
+        } catch (err) {
+            console.error('Failed to load stock dashboard:', err);
+        }
+    }
+    
+    // Run on page load
+    window.addEventListener('DOMContentLoaded', loadStockDashboard);
+    </script>
+    
+
 </body>
 </html>
 
