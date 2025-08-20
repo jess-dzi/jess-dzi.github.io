@@ -6,7 +6,7 @@ import json
 from prediction_pipeline import PredictionPipeline
 
 class ChartGenerator:
-    def __init__(self, output_dir="../personal_website/charts"):
+    def __init__(self, output_dir="../Personal Project/charts"):
         self.output_dir = output_dir
         os.makedirs(self.output_dir, exist_ok=True)
 
@@ -29,23 +29,23 @@ class ChartGenerator:
         return filename  # Return filename only for web path
 
     def generate_all(self, index_predictions):
-        """Generate charts and JSON for all indices."""
-        dashboard_data = []
+        print("generate_all called with:", index_predictions)
+        dashboard_data = {}
         for name, (symbol, pred) in index_predictions.items():
-            chart_file = self.generate_chart(symbol, name)
-            dashboard_data.append({
+            print(f"Generating chart for {name}...")
+            chart_path = self.generate_chart(symbol, name)
+            dashboard_data[name] = {
                 "name": name,
                 "symbol": symbol,
                 "prediction": "up" if pred == 1 else "down",
-                "chart": f"charts/{chart_file}"  # relative path for website
-            })
+                "chart": chart_path
+            }
 
-        # Save JSON for your website frontend
-        json_path = os.path.join(os.path.dirname(self.output_dir), "dashboard.json")
+        json_path = os.path.abspath(os.path.join(self.output_dir, "dashboard.json"))
+        print("Writing dashboard JSON to:", json_path)
         with open(json_path, "w") as f:
             json.dump(dashboard_data, f, indent=2)
-
-        print("Dashboard data saved:", json_path)
         return dashboard_data
+
 
 

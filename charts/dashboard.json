@@ -1,0 +1,20 @@
+{
+  "NASDAQ": {
+    "name": "NASDAQ",
+    "symbol": "^IXIC",
+    "prediction": "up",
+    "chart": "NASDAQ_chart.png"
+  },
+  "Dow Jones": {
+    "name": "Dow Jones",
+    "symbol": "^DJI",
+    "prediction": "up",
+    "chart": "Dow_Jones_chart.png"
+  },
+  "S&P500": {
+    "name": "S&P500",
+    "symbol": "^GSPC",
+    "prediction": "up",
+    "chart": "S&P500_chart.png"
+  }
+}
