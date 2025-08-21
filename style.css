@@ -78,41 +78,51 @@ nav a.active {
   text-align: center;
 }
 
-/* ---------------- Projects Grid ---------------- */
+/* ---------------- Projects Grid (clean + bigger cards) ---------------- */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); /* wider min size */
+  gap: 24px;                        /* more space between cards */
+  max-width: 1100px;                /* grid width */
+  margin: 50px auto;
+  padding: 0 20px;
 }
 
 .project-card {
-  background-color: #f9f9f9;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  background: #fff;
+  border-radius: 16px;              /* smoother corners */
+  padding: 28px;                    /* more breathing room */
+  min-height: 380px;                /* taller cards */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.18);
 }
 
 .project-card h2 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: #111;
+  margin-top: 0;
+  font-size: 1.4rem;
 }
 
 .project-card p {
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  flex-grow: 1; /* lets description take up space */
 }
 
 .project-card a {
+  display: inline-block;
+  margin-top: 15px;
   font-weight: 600;
   color: #0077b6;
+  text-decoration: none;
 }
 
 .project-card a:hover {
@@ -255,6 +265,27 @@ footer {
 
 .project-card a:hover {
   text-decoration: underline;
+}
+
+/* ---------------- GitHub Button ---------------- */
+.github-btn {
+  display: block;               /* full width for centering */
+  margin: 20px auto 0 auto;     /* center horizontally */
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #24292e;    /* GitHub dark gray */
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;           /* ensure text is centered */
+  width: fit-content;           /* shrink wrap around text */
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.github-btn:hover {
+  background-color: #000;
+  transform: translateY(-2px);
 }
 
   
