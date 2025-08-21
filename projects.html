@@ -133,53 +133,56 @@
 
 <script>
     async function loadStockDashboard() {
-        try {
-            const response = await fetch('charts/dashboard.json');  // path relative to your website root
-            const data = await response.json();
+      const container = document.getElementById('dashboard-container');
+      if (!container) return;
     
-            const container = document.getElementById('dashboard-container');
+      try {
+        // fetch from /charts/ next to projects.html
+        const res = await fetch('charts/dashboard.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
     
-            data.forEach(index => {
-                // Create a dashboard item
-                const item = document.createElement('div');
-                item.classList.add('dashboard-item');
+        
+        Object.values(data).forEach(index => {
+          const item = document.createElement('div');
+          item.className = 'dashboard-item';
     
-                // Chart image
-                const img = document.createElement('img');
-                img.src = `charts/${index.chart}`; // relative path to chart image
-                img.alt = `${index.name} chart`;
-                img.classList.add('chart');
+          const info = document.createElement('div');
+          info.className = 'index-info';
     
-                // Index info (name + prediction)
-                const info = document.createElement('div');
-                info.classList.add('index-info');
+          const nameEl = document.createElement('div');
+          nameEl.className = 'index-name';
+          nameEl.textContent = index.name;
     
-                const name = document.createElement('div');
-                name.classList.add('index-name');
-                name.textContent = index.name;
+          const arrow = document.createElement('span');
+          arrow.className = 'prediction ' + (index.prediction === 'up' ? 'up' : 'down');
+          arrow.textContent = index.prediction === 'up' ? '▲' : '▼';
+          nameEl.appendChild(arrow);
     
-                const prediction = document.createElement('span');
-                prediction.classList.add('prediction', index.prediction === 'up' ? 'up' : 'down');
-                prediction.textContent = index.prediction === 'up' ? '▲' : '▼';
+          info.appendChild(nameEl);
     
-                name.appendChild(prediction);
-                info.appendChild(name);
+          const img = document.createElement('img');
+          img.className = 'chart';
+          img.src = 'charts/' + index.chart; // e.g. charts/NASDAQ_chart.png
+          img.alt = `${index.name} chart`;
+          img.loading = 'lazy';
     
-                // Append chart and info to item
-                item.appendChild(img);
-                item.appendChild(info);
-    
-                // Append item to container
-                container.appendChild(item);
-            });
-        } catch (err) {
-            console.error('Failed to load stock dashboard:', err);
-        }
+          item.appendChild(info);
+          item.appendChild(img);
+          container.appendChild(item);
+        });
+      } catch (err) {
+        console.error('Failed to load stock dashboard:', err);
+        const msg = document.createElement('p');
+        msg.style.color = '#b00020';
+        msg.textContent = 'Could not load dashboard. If you just pushed, refresh in ~30s or hard-reload.';
+        container.appendChild(msg);
+      }
     }
     
-    // Run on page load
     window.addEventListener('DOMContentLoaded', loadStockDashboard);
     </script>
+    
     
     
 
