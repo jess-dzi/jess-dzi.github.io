@@ -275,7 +275,7 @@ footer {
   font-size: 0.95rem;
   font-weight: 600;
   color: #fff;
-  background-color: #24292e;    /* GitHub dark gray */
+  background-color: rgb(195, 190, 190);    
   border-radius: 8px;
   text-decoration: none;
   text-align: center;           /* ensure text is centered */
