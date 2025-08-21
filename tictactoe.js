@@ -15,7 +15,7 @@ class TicTacToe {
 
     bindEvents() {
         this.cells.forEach(cell => {
-            cell.addEventListener("click", (e) => {
+            cell.addEventListener("click", () => {
                 const x = parseInt(cell.dataset.x);
                 const y = parseInt(cell.dataset.y);
                 if (this.board[x][y] === '_' && this.playerTurn === 'X') {
@@ -61,16 +61,19 @@ class TicTacToe {
             document.querySelector(`.cell[data-x='${x}'][data-y='${y}']`).textContent = 'O';
         }
         this.messageEl.textContent = `AI evaluated ${this.gamesEvaluated} game states.`;
-        this.playerTurn = 'X';
-        this.checkGameOver();
+
+        // ✅ Only switch turn if game not over
+        if (!this.checkGameOver()) {
+            this.playerTurn = 'X';
+        }
     }
 
     minimaxMax(alpha, beta, depth) {
         const winner = this.gameOver();
         if (winner) {
             this.gamesEvaluated++;
-            if (winner==='X') return [-1-depth, null, null];
-            if (winner==='O') return [1+depth, null, null];
+            if (winner==='X') return [-10 + depth, null, null];
+            if (winner==='O') return [10 - depth, null, null];
             if (winner==='_') return [0, null, null];
         }
 
@@ -94,8 +97,8 @@ class TicTacToe {
         const winner = this.gameOver();
         if (winner) {
             this.gamesEvaluated++;
-            if (winner==='X') return [-1-depth, null, null];
-            if (winner==='O') return [1+depth, null, null];
+            if (winner==='X') return [-10 + depth, null, null];
+            if (winner==='O') return [10 - depth, null, null];
             if (winner==='_') return [0, null, null];
         }
 
