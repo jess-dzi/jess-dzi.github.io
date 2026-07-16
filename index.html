@@ -3,53 +3,301 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jessica Dziedzic - Home</title>
+  <title>Jessica Dziedzic — Product Manager</title>
+  <meta name="description" content="Jessica Dziedzic — Computer Science graduate from UVA pursuing product management, with experience in M&A tech at PwC and cybersecurity.">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="profile-header">
-        <div class="header-content">
-          <img src="headshot.jpeg" alt="Jessica Dziedzic" class="profile-pic">
-          <h1 class="name">Jessica Dziedzic</h1>
+
+  <nav class="site-nav">
+    <a href="#top" class="nav-mark">Jessica Dziedzic</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a href="Jessica-Dziedzic-Resume.pdf" target="_blank" class="nav-resume">Resume</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-top">
+      <img src="headshot.jpeg" alt="Jessica Dziedzic" class="hero-pic">
+      <span class="hero-status">Charlottesville, VA → Qingdao, China · Open to Product Management roles</span>
+    </div>
+    <h1>Hi, I'm Jessica.</h1>
+    <p class="hero-sub">I'm a Computer Science graduate from the University of Virginia who builds at the intersection of engineering and business strategy — and I'm looking for a product management seat where I can do more of it.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Get in touch</a>
+      <a href="Jessica-Dziedzic-Resume.pdf" target="_blank" class="btn btn-secondary">View resume</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="section-inner">
+      <span class="kicker">About</span>
+      <h2 class="section-heading">I got into product management by asking the wrong questions at the right time.</h2>
+      <div class="about-text">
+        <p>At <strong>PwC</strong>, I was brought on to build Python automation for M&amp;A contract analysis. Somewhere in that project, I realized I cared less about the code itself and more about what it changed: how a team reviewed contracts, how fast they could move, what became possible once the manual work disappeared. That's the part of the job I couldn't stop thinking about.</p>
+        <p>I studied <strong>Computer Science and Chinese Language</strong> at UVA, which taught me two very different ways of thinking about systems — one technical, one cultural. I've also spent time in <strong>cybersecurity</strong>, which sharpened how I think about risk and tradeoffs.</p>
+        <p>I'm currently in <strong>Qingdao, China</strong>, building my Mandarin fluency and watching how differently products get built here. I'm looking for a role where I can translate between engineers and the business, ask better questions, and ship things people actually use.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="surface">
+    <div class="section-inner">
+      <span class="kicker">Experience</span>
+      <h2 class="section-heading">Where I've worked and studied.</h2>
+      <div class="exp-list">
+
+        <article class="data-card">
+          <div class="data-card-head">
+            <h3>PricewaterhouseCoopers</h3>
+            <span class="data-card-meta">New York, NY · Jun–Aug 2025</span>
+          </div>
+          <p class="data-card-role">Deals Technology &amp; Data Solutions Summer Analyst</p>
+          <ul>
+            <li>Conducted M&amp;A contract analysis using SQL, Excel, and Python to identify contract dispositions and renegotiation opportunities between entities and vendors.</li>
+            <li>Engineered Python automation powered by GPT APIs to analyze financial contracts, cutting review time significantly and helping the team move faster on deal timelines.</li>
+          </ul>
+          <span class="stat-chip">90% of client's $54M Y1 synergy goal</span>
+          <span class="stat-chip">70% faster contract review</span>
+        </article>
+
+        <article class="data-card">
+          <div class="data-card-head">
+            <h3>University of Virginia</h3>
+            <span class="data-card-meta">Charlottesville, VA · May 2026</span>
+          </div>
+          <p class="data-card-role">B.S. Computer Science, Chinese Language</p>
+          <ul>
+            <li>Coursework: Data Structures &amp; Algorithms, Discrete Math &amp; Theory, Computer Systems &amp; Organization, Software Development Essentials, Cybersecurity, Introduction to AI.</li>
+            <li>Marketing Chair, Alpha Kappa Psi Professional Business Fraternity — mentored 15+ first-year students through career development workshops and completed an 8-week business program culminating in a consulting case and stock pitch.</li>
+          </ul>
+          <span class="stat-chip">GPA 3.6 / 4.0</span>
+        </article>
+
+        <article class="data-card">
+          <div class="data-card-head">
+            <h3>Qingdao University 青岛大学</h3>
+            <span class="data-card-meta">Qingdao, China · Expected Jan 2027</span>
+          </div>
+          <p class="data-card-role">Chinese Language Program</p>
+          <ul>
+            <li>Studying Chinese Language and Literature to build fluency and a firsthand understanding of China's tech and business landscape.</li>
+          </ul>
+          <span class="stat-chip">HSK 5</span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-inner">
+      <span class="kicker">Featured Projects</span>
+      <h2 class="section-heading">A few things I've built.</h2>
+
+      <div class="projects-grid">
+
+        <div class="project-card" id="stock-dashboard">
+          <span class="project-tag">Data / ML</span>
+          <h3>Market Movement Predictor</h3>
+          <p>A Python pipeline that engineers features from five years of historical data to forecast 30-day direction for the Dow, NASDAQ, and S&amp;P 500. Built to explore how a simple, well-scoped model can turn raw market data into a decision-ready signal.</p>
+          <div id="dashboard-container"></div>
+          <div class="project-card-footer">
+            <a href="https://github.com/jess-dzi/jess-dzi.github.io" target="_blank" class="github-btn">View code on GitHub</a>
+          </div>
         </div>
-      </header>
-      
-      <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="resume.html">Resume</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      
 
-  <main class="about">
-    <p>
-      Hi! I'm Jessica, a fourth-year at the University of Virginia studying Computer Science on a Cybersecurity focal path. <p>
-      
-      <p>I’m interested in the intersection of technology and finance, especially how innovations like blockchain are reshaping 
-        financial systems and creating more secure, efficient, and transparent solutions. I'm interested in M&A and how technology
-        can facilitate more efficient deal execution, integration, and value creation.
-        Through coursework, personal projects and internships, I have experience with Python, Java, C#, and Javascript. </p>
-      
-      <p>Beyond technical skills, I’m passionate about languages—both programming and spoken—and am currently studying Mandarin Chinese and Spanish.
-      </p>
-     
-      <p> In my free time, I enjoy reading, cooking, running, and spending time with friends and family.</p>
-    
-  </main>
+        <div class="project-card">
+          <span class="project-tag">Algorithms</span>
+          <h3>Unbeatable Tic-Tac-Toe</h3>
+          <p>An AI opponent using Minimax with alpha-beta pruning to evaluate every possible game state and always play optimally. Built to get hands-on with decision trees and game theory. Play it below.</p>
+          <div class="tic-tac-toe">
+            <div id="board" class="board">
+              <div class="cell" data-x="0" data-y="0"></div>
+              <div class="cell" data-x="0" data-y="1"></div>
+              <div class="cell" data-x="0" data-y="2"></div>
+              <div class="cell" data-x="1" data-y="0"></div>
+              <div class="cell" data-x="1" data-y="1"></div>
+              <div class="cell" data-x="1" data-y="2"></div>
+              <div class="cell" data-x="2" data-y="0"></div>
+              <div class="cell" data-x="2" data-y="1"></div>
+              <div class="cell" data-x="2" data-y="2"></div>
+            </div>
+            <p id="message"></p>
+            <button id="reset">Reset game</button>
+          </div>
+          <div class="project-card-footer">
+            <a href="https://github.com/jess-dzi/jess-dzi.github.io" target="_blank" class="github-btn">View code on GitHub</a>
+          </div>
+        </div>
 
-  <div class="social-links">
-    <a href="https://www.linkedin.com/in/jessicadziedzic/" target="_blank">
-      <img src="linkedin.png" alt="LinkedIn" class="icon">
-    </a>
-    <a href="https://github.com/jess-dzi" target="_blank">
-      <img src="github.png" alt="GitHub" class="icon">
-    </a>
-  </div>
+        <div class="project-card placeholder">
+          <span class="kicker">Coming soon</span>
+          <p>A new project is in progress — check back soon.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="surface">
+    <div class="section-inner">
+      <span class="kicker">Skills</span>
+      <h2 class="section-heading">What I bring to the table.</h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <div class="skill-group-head">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            <h3>Technical</h3>
+          </div>
+          <div class="chip-row">
+            <span class="chip">Python</span>
+            <span class="chip">SQL</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Java</span>
+            <span class="chip">C++</span>
+            <span class="chip">HTML/CSS</span>
+            <span class="chip">Git</span>
+            <span class="chip">React</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-head">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <h3>Product &amp; Business</h3>
+          </div>
+          <div class="chip-row">
+            <span class="chip">Stakeholder communication</span>
+            <span class="chip">Cross-functional collaboration</span>
+            <span class="chip">Requirements gathering</span>
+            <span class="chip">Data-driven decisions</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-head">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <h3>Security</h3>
+          </div>
+          <div class="chip-row">
+            <span class="chip">(ISC)² Certified in Cybersecurity</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-head">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <h3>Languages</h3>
+          </div>
+          <div class="chip-row">
+            <span class="chip">English — Native</span>
+            <span class="chip">Mandarin — HSK 5</span>
+            <span class="chip">Spanish — Elementary</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-inner contact-block">
+      <span class="kicker">Contact</span>
+      <h2 class="section-heading">Let's talk product.</h2>
+      <a href="mailto:vjh2rr@virginia.edu" class="contact-email">vjh2rr@virginia.edu</a>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/jessicadziedzic/" target="_blank">
+          <img src="linkedin.png" alt="LinkedIn" class="icon">
+        </a>
+        <a href="https://github.com/jess-dzi" target="_blank">
+          <img src="github.png" alt="GitHub" class="icon">
+        </a>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    <p>© 2025 Jessica Dziedzic</p>
+    <p>© 2026 Jessica Dziedzic</p>
   </footer>
+
+  <script src="tictactoe.js"></script>
+  <script>
+    async function loadStockDashboard() {
+      const container = document.getElementById('dashboard-container');
+      if (!container) return;
+
+      try {
+        const res = await fetch('charts/dashboard.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+
+        Object.values(data).forEach(index => {
+          const item = document.createElement('div');
+          item.className = 'dashboard-item';
+
+          const info = document.createElement('div');
+          info.className = 'index-info';
+
+          const nameEl = document.createElement('div');
+          nameEl.className = 'index-name';
+          nameEl.textContent = index.name;
+
+          const arrow = document.createElement('span');
+          arrow.className = 'prediction ' + (index.prediction === 'up' ? 'up' : 'down');
+          arrow.textContent = index.prediction === 'up' ? '▲' : '▼';
+          nameEl.appendChild(arrow);
+
+          info.appendChild(nameEl);
+
+          const img = document.createElement('img');
+          img.className = 'chart';
+          img.src = 'charts/' + index.chart;
+          img.alt = `${index.name} chart`;
+          img.loading = 'lazy';
+
+          item.appendChild(info);
+          item.appendChild(img);
+          container.appendChild(item);
+        });
+      } catch (err) {
+        console.error('Failed to load stock dashboard:', err);
+        const msg = document.createElement('p');
+        msg.style.color = '#B23A2E';
+        msg.style.fontSize = '0.9rem';
+        msg.textContent = 'Could not load dashboard. If you just pushed, refresh in ~30s or hard-reload.';
+        container.appendChild(msg);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', loadStockDashboard);
+
+    // Highlight active nav link based on scroll position
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+          });
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+
 </body>
 </html>
